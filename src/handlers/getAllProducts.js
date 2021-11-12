@@ -13,12 +13,6 @@ const getAllProducts = () => {
       price: 0.0344023,
     },
     {
-      name: "heydude.eth",
-      nftimage:
-        "https://storage.opensea.io/files/0ce2c1848a4698571ce185ed8025a6dd.svg",
-      price: 0.0785871,
-    },
-    {
       name: "Soccer Doge #7612",
       nftimage:
         "https://lh3.googleusercontent.com/NhEf6NwT01aP9a8tHDOLDxhc5IYp3d6a-4o26ufRx67oPMxHJ3NE76j54MttJvOlbN4c0C0qc1-ipYxRCmXX2DqsPn6TLH9utCel=w287",

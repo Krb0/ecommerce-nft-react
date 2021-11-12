@@ -5,17 +5,20 @@ const fontColor = "#242424";
 const StyledNav = styled.nav`
   @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,100;1,300&family=Mohave:wght@300;500;700&display=swap");
   display: flex;
-  width: 100%;
-  height: 1.5rem;
+  width: 100vw;
+  height: auto;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background: #e5e5e5;
   padding: 0.1rem 0;
+  max-width: 100%;
+  flex-wrap: wrap;
   color: ${fontColor};
   .logo {
     margin: 0.1rem 1.4rem;
     display: flex;
+    flex: 1;
     align-items: center;
   }
   .logo img {
@@ -58,6 +61,13 @@ const StyledNav = styled.nav`
   .cart-img {
     width: 50px;
     height: 50px;
+  }
+  @media (max-width: 900px) {
+    justify-content: center;
+    .logo {
+      margin: auto;
+      justify-content: center;
+    }
   }
 `;
 export default StyledNav;

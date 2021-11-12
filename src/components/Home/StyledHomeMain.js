@@ -4,6 +4,7 @@ import image from "../../images/home-image.jpg";
 const StyledHomeMain = styled.div`
   width: 100vw;
   height: 800px;
+  max-width: 100%;
   background: url(${image});
   background-size: cover;
   background-position: 0% 35%;
