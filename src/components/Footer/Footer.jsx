@@ -1,5 +1,5 @@
 import React from "react";
-import StyledFooter from "../styles/StyledFooter";
+import StyledFooter from "./StyledFooter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,

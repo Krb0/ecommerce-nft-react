@@ -1,4 +1,4 @@
-import StyledHomeMain from "../styles/StyledHomeMain";
+import StyledHomeMain from "./StyledHomeMain";
 const HomeSection = () => {
   return (
     <StyledHomeMain>

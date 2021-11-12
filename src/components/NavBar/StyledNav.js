@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const fontColor = "#242424";
-const fontFocusColor = "#3bd";
 
 const StyledNav = styled.nav`
   @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,100;1,300&family=Mohave:wght@300;500;700&display=swap");

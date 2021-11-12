@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import image from "../images/home-image.jpg";
+import image from "../../images/home-image.jpg";
 
 const StyledHomeMain = styled.div`
   width: 100vw;
