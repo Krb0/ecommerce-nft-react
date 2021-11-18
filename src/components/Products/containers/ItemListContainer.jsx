@@ -1,10 +1,10 @@
 import StyledItemList from "./StyledItemList.js";
-import Product from "../Product";
+import Item from "../Item";
 const ItemListContainer = ({ products }) => {
   return (
     <StyledItemList>
       {products.map((product) => (
-        <Product product={product} />
+        <Item product={product} />
       ))}
     </StyledItemList>
   );

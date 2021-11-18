@@ -37,6 +37,20 @@ const StyledHomeMain = styled.div`
     font-size: 0.4rem;
     border-radius: 8px;
     margin-top: 1rem;
+    cursor: pointer;
+    :hover {
+      color: #242423;
+    }
+  }
+  @media (max-width: 900px) {
+    background-position: center;
+    h2 {
+      font-size: 1rem;
+    }
+    .btn-explore {
+      font-size: 0.25rem;
+      width: 2rem;
+    }
   }
 `;
 export default StyledHomeMain;

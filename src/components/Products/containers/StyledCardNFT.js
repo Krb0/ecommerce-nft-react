@@ -1,26 +1,55 @@
 import styled from "styled-components";
 
 const StyledCardNFT = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
   padding: 0.1rem;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  align-items: center;
+  background-color: rgba(235, 232, 232, 0.8);
+  border: rgba(235, 232, 232, 0.9) 1px solid;
+  border-radius: 5px;
   flex: 1 1 5rem;
   margin: 0.1rem;
-  font-family: "Anton", sans-serif;
-  font-weight: 100;
+  align-items: center;
+  max-width: 450px;
   img {
-    width: 300px;
-    max-width: 100%;
+    width: 95%;
+    max-width: 350px;
     height: 280px;
     object-fit: cover;
     object-position: center;
   }
   h1 {
-    font-size: 0.3rem;
-    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.24rem;
+    font-weight: 800;
+
+    color: #525252;
+    width: 65%;
+    padding: 0 0.2rem;
+  }
+  .detail-container {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    .price-container {
+      display: flex;
+      flex-direction: column;
+      h3 {
+        margin: 0.15rem 0 0 0;
+        font-size: 0.25rem;
+        color: #525252;
+        text-align: right;
+      }
+      h4 {
+        display: flex;
+        font-size: 0.3rem;
+        align-items: center;
+        svg {
+          margin-right: 0.1rem;
+          color: purple;
+        }
+      }
+    }
   }
 `;
 

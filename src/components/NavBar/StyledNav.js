@@ -3,7 +3,6 @@ import styled from "styled-components";
 const fontColor = "#242424";
 
 const StyledNav = styled.nav`
-  @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,100;1,300&family=Mohave:wght@300;500;700&display=swap");
   display: flex;
   width: 100vw;
   height: auto;
@@ -31,7 +30,7 @@ const StyledNav = styled.nav`
   }
   h1 {
     font-size: 0.35rem;
-    font-family: Mohave, sans-serif;
+    font-family: "Mohave", sans-serif;
     font-weight: 500;
     text-align: center;
     cursor: pointer;

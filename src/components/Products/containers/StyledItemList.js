@@ -6,8 +6,9 @@ const StyledItemList = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 1rem;
-  justify-content: space-between;
+  margin: 0.2rem 1rem;
+  justify-content: center;
+  min-height: 100px;
 `;
 
 export default StyledItemList;

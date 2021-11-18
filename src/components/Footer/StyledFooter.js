@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledFooter = styled.div`
+const StyledFooter = styled.footer`
   background-color: #242424;
   height: 300px;
   margin: 0;
@@ -12,25 +12,31 @@ const StyledFooter = styled.div`
   align-items: center;
   color: white;
   h2 {
-    @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap");
     font-family: "Red Hat Mono", monospace;
     font-size: 0.7rem;
     margin-top: 1rem;
     margin-bottom: 0.2rem;
+    text-align: center;
   }
   ul {
-    margin-top: 0.2rem;
-    margin-bottom: 0rem;
     display: flex;
     flex-grow: 1;
     align-items: center;
     padding: 0;
     list-style: none;
-    width: 12%;
-    justify-content: space-between;
+    width: 60%;
+    justify-content: center;
     svg {
       font-size: 0.8rem;
       cursor: pointer;
+      margin: 0rem 0.3rem;
+      align-self: center;
+    }
+  }
+  @media (max-width: 900px) {
+    h2,
+    ul svg {
+      font-size: 0.6rem;
     }
   }
 `;
