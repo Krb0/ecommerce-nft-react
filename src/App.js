@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/ecommerce-caceres" element={<Home />} />
         <Route
           path="/products"
           element={
