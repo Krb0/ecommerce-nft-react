@@ -9,10 +9,12 @@ const Products = ({ ItemListContainer, allProducts, setAllProducts }) => {
     window.scrollTo(0, 0);
     getAllProducts
       .then((res) => {
+        setAllProducts(res);
         setFilteredProducts(res);
+        console.log("test");
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [setAllProducts]);
   return (
     <StyledProductsPage>
       <input
