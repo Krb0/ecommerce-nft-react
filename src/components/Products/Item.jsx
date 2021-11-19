@@ -2,9 +2,10 @@ import React from "react";
 import StyledCardNFT from "./containers/StyledCardNFT";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
+
 const Product = ({ product }) => {
   return (
-    <StyledCardNFT key={product.key}>
+    <StyledCardNFT>
       <img src={product.nftimage} alt="nft"></img>
       <div className="detail-container">
         <h1>{product.name} </h1>

@@ -4,7 +4,7 @@ const ItemListContainer = ({ products }) => {
   return (
     <StyledItemList>
       {products.map((product) => (
-        <Item product={product} />
+        <Item product={product} key={product.key} />
       ))}
     </StyledItemList>
   );
