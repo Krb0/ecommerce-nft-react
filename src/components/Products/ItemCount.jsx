@@ -1,6 +1,5 @@
 import { useState } from "react";
-import onAddHandler from "../../utils/onAddHandler";
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial, onAddHandler }) => {
   const [counter, setCounter] = useState(0);
 
   return (

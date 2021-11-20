@@ -3,17 +3,15 @@ import StyledCardNFT from "./containers/StyledCardNFT";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import ItemCount from "./ItemCount";
+import onAddHandler from "../../utils/onAddHandler";
 const Product = ({ product }) => {
-  const onAdd = () => {
-    console.log("OnAdd Event");
-  };
   return (
     <StyledCardNFT>
       <img src={product.nftimage} alt="nft"></img>
       <div className="detail-container">
         <div>
           <h1>{product.name} </h1>
-          <ItemCount initial={0} stock={product.stock} onAdd={onAdd} />
+          <ItemCount initial={0} stock={product.stock} onAdd={onAddHandler} />
         </div>
         <div className="price-container">
           <h3>Price</h3>
