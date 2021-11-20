@@ -50,6 +50,15 @@ const StyledCardNFT = styled.div`
         }
       }
     }
+    .counter-div {
+      display: flex;
+      height: 0.5rem;
+
+      p {
+        font-size: 20px;
+        margin: 0;
+      }
+    }
   }
 `;
 
