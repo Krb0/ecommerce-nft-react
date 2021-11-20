@@ -30,7 +30,7 @@ const ItemCount = ({ stock, initial, onAddHandler }) => {
       >
         +
       </button>
-      <button>Agregar</button>
+      <button>Add to Cart</button>
     </div>
   );
 };
