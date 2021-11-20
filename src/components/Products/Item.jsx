@@ -11,7 +11,11 @@ const Product = ({ product }) => {
       <div className="detail-container">
         <div>
           <h1>{product.name} </h1>
-          <ItemCount initial={0} stock={product.stock} onAdd={onAddHandler} />
+          <ItemCount
+            initial={0}
+            stock={product.stock}
+            onAddHandler={onAddHandler}
+          />
         </div>
         <div className="price-container">
           <h3>Price</h3>
