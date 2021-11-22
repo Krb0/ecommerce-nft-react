@@ -13,6 +13,20 @@ const StyledProductsPage = styled.div`
     margin: 0.5rem 0 0 0;
     border-radius: 3px;
   }
+    .paginate-container{
+      font-size: 0.3rem;
+      display:flex;
+      width:60%;
+      flex:1;
+      list-style-type: none;
+      justify-content: space-between;
+      .paginate-previous-btn{
+
+      
+      }
+    
+
+  }
 `;
 
 export default StyledProductsPage;

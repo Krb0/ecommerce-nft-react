@@ -1,12 +1,33 @@
+import {useState} from 'react'
 import StyledItemList from "./StyledItemList.js";
 import Item from "../Item";
-const ItemListContainer = ({ products }) => {
+import ReactPagination from "react-paginate"
+
+const ItemListContainer = ({ products, page, setPage  }) => {
+  const onPageChange = ({ selected }) => {
+    setPage(selected)
+  }
+
+  const itemsPerPage = 20;
+  const pagesVisited = page * itemsPerPage;
+
+  const pageCount = Math.ceil(products.length / itemsPerPage)
+
   return (
+    <>
+    <ReactPagination previousLabel={'Previous'} nextLabel={'Next'} pageCount={pageCount} onPageChange={onPageChange} containerClassName={'paginate-container'} previousLinkClassName={'paginate-previous-btn'} nextLinkClassName={'paginate-next-btn'} disabledClassName={'paginate-disabled'} activeClassName={'paginate-active'} />
     <StyledItemList>
-      {products.map((product) => (
-        <Item product={product} key={product.key} />
-      ))}
+
+      {
+        products.slice(pagesVisited, pagesVisited + itemsPerPage).map(
+          (product) =>
+          {
+            return <Item product={product} key={product.key} />
+          })
+      }
     </StyledItemList>
+    <ReactPagination previousLabel={'Previous'} nextLabel={'Next'} pageCount={pageCount} onPageChange={onPageChange} containerClassName={'paginate-container'} previousLinkClassName={'paginate-previous-btn'} nextLinkClassName={'paginate-next-btn'} disabledClassName={'paginate-disabled'} activeClassName={'paginate-active'} />
+    </>
   );
 };
 

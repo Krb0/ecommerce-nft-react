@@ -9,7 +9,7 @@ const Product = ({ product }) => {
     <StyledCardNFT>
       <img src={product.nftimage} alt="nft"></img>
       <div className="detail-container">
-        <div>
+        <div className="name-div">
           <h1>{product.name} </h1>
           <ItemCount
             initial={0}

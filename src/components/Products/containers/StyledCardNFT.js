@@ -22,15 +22,16 @@ const StyledCardNFT = styled.div`
     font-family: "Orbitron", sans-serif;
     font-size: 0.24rem;
     font-weight: 800;
-
+    height: 50%;
     color: #525252;
-    width: 65%;
+    width: 80%;
     padding: 0 0.2rem;
   }
   .detail-container {
     width: 95%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     .price-container {
       display: flex;
       flex-direction: column;
@@ -58,6 +59,12 @@ const StyledCardNFT = styled.div`
         font-size: 20px;
         margin: 0;
       }
+    }
+
+    .name-div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
   }
 `;
