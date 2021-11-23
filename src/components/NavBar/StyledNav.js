@@ -20,6 +20,8 @@ const StyledNav = styled.nav`
     display: flex;
     flex: 1;
     align-items: center;
+    color:#242424;
+    text-decoration: none;
   }
   .logo img {
     width: 80px;
