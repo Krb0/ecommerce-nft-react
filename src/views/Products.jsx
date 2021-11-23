@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import StyledProductsPage from "../components/Products/StyledProductsPage";
+import StyledProductsPage from "./StyledProductsPage";
 import getAllProducts from "../utils/getAllProducts";
-import ReactPaginate from 'react-paginate';
-
+import Loader from '../components/GlobalComponents/Loader.jsx'
 const Products = ({ ItemListContainer, allProducts, setAllProducts }) => {
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
   const [page, setPage] = useState(0);
@@ -17,13 +16,17 @@ const Products = ({ ItemListContainer, allProducts, setAllProducts }) => {
   }, [setAllProducts]);
   return (
     <StyledProductsPage>
-      <input
+      {allProducts.length === 0 ? <Loader /> :
+        <>
+          <input
         type="search"
         onChange={(e) => searchChange(e, allProducts, setFilteredProducts,setPage)}
         placeholder="Search NFTs..."
         autoFocus
-      />
-      <ItemListContainer products={filteredProducts} page={page} setPage={setPage} />
+          />
+          <ItemListContainer products={filteredProducts} page={page} setPage={setPage} />
+        </>}
+      
     </StyledProductsPage>
   );
 };

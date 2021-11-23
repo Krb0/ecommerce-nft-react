@@ -4,10 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import ItemCount from "./ItemCount";
 import onAddHandler from "../../utils/onAddHandler";
+import {Link} from 'react-router-dom'
 const Product = ({ product }) => {
   return (
-    <StyledCardNFT>
-      <img src={product.nftimage} alt="nft"></img>
+    <StyledCardNFT >
+      <Link to={`/products/${product.id}`}>
+      <img src={product.nftimage} alt="nft" ></img></Link>
       <div className="detail-container">
         <div className="name-div">
           <h1>{product.name} </h1>

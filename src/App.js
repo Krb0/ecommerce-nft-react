@@ -4,6 +4,7 @@ import Home from "./views/Home";
 import Products from "./views/Products";
 import Footer from "./components/Footer/Footer";
 import ItemListContainer from "./components/Products/containers/ItemListContainer";
+import ItemDetailContainer from './components/Products/containers/ItemDetailContainer';
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -25,6 +26,9 @@ function App() {
             />
           }
         />
+        <Route path="/products/:idProduct" element={
+            <ItemDetailContainer allProducts={allProducts} setAllProducts={setAllProducts} />
+          }/>
       </Routes>
       <Footer />
     </div>

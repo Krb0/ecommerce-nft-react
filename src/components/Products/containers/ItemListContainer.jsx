@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import StyledItemList from "./StyledItemList.js";
 import Item from "../Item";
 import ReactPagination from "react-paginate"

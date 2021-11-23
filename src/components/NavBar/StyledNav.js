@@ -14,6 +14,7 @@ const StyledNav = styled.nav`
   max-width: 100%;
   flex-wrap: wrap;
   color: ${fontColor};
+  box-shadow:rgb(4 17 29 / 70%) 0px 0px 8px 0px;
   .logo {
     margin: 0.1rem 1.4rem;
     display: flex;
@@ -29,7 +30,7 @@ const StyledNav = styled.nav`
     height: 500px;
   }
   h1 {
-    font-size: 0.35rem;
+    font-size: 0.4rem;
     font-family: "Mohave", sans-serif;
     font-weight: 500;
     text-align: center;
