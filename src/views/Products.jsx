@@ -2,20 +2,36 @@ import { useEffect, useState } from "react";
 import StyledProductsPage from "./StyledProductsPage";
 import getAllProducts from "../utils/getAllProducts";
 import Loader from '../components/GlobalComponents/Loader.jsx'
+import { useParams } from 'react-router-dom';
 const Products = ({ ItemListContainer, allProducts, setAllProducts }) => {
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
   const [page, setPage] = useState(0);
+  const { idCategory } = useParams();
+
   useEffect(() => {
     window.scrollTo(0, 0);
     getAllProducts
       .then((res) => {
-        setAllProducts(res);
-        setFilteredProducts(res);
+        if (idCategory) {
+          const filteredCategory = res.filter((prod) => prod.category === idCategory);
+          if (filteredCategory.length === 0) {
+            window.location.href = '/notfound'
+          } else {
+            
+            setAllProducts(filteredCategory);
+            setFilteredProducts(filteredCategory);
+          }
+        }
+        else {
+          setAllProducts(res);
+          setFilteredProducts(res);
+        }
       })
       .catch((error) => console.log(error));
-  }, [setAllProducts]);
+  }, [setAllProducts, idCategory]);
   return (
     <StyledProductsPage>
+      {}
       {allProducts.length === 0 ? <Loader /> :
         <>
           <input
