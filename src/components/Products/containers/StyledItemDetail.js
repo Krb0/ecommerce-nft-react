@@ -7,12 +7,12 @@ const StyledItemDetail = styled.div`
     width:100%;
     justify-content: space-around;
     flex-wrap: wrap;
+    align-items: center;
     .nft-image{
         border-radius:5px;
         width:600px;
         height: 600px;
         align-self: center;
-        
     }
     .image-container{
         display:flex;
@@ -86,6 +86,28 @@ const StyledItemDetail = styled.div`
                     color: white;
                 }
             }
+        }
+    }
+    @media (max-width: 999px) {
+        .nft-info{
+            width:90%;
+            margin-bottom: 1rem;
+            .price-creator-container{
+                width:100%;
+                justify-content: space-between;
+            }
+        }
+
+    }
+    @media(max-width: 800px){
+        .nft-image{
+            margin-top:1rem;
+            width:300px;
+            height:300px;
+        }
+        .nft-info{*{
+            font-size:90%;
+        }
         }
     }
     

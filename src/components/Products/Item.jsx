@@ -12,7 +12,7 @@ const Product = ({ product }) => {
       <img src={product.nftimage} alt="nft" ></img></Link>
       <div className="detail-container">
         <div className="name-div">
-          <h1>{product.name} </h1>
+          <h1 onClick={() => console.log(product.nftimage)} >{product.name} </h1>
           <ItemCount
             initial={0}
             stock={product.stock}
