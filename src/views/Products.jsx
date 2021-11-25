@@ -31,7 +31,6 @@ const Products = ({ ItemListContainer, allProducts, setAllProducts }) => {
   }, [setAllProducts, idCategory]);
   return (
     <StyledProductsPage>
-      {}
       {allProducts.length === 0 ? <Loader /> :
         <>
           <input
