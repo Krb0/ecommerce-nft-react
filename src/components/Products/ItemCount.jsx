@@ -1,5 +1,5 @@
 import { useState } from "react";
-const ItemCount = ({ stock, initial, onAddHandler }) => {
+const ItemCount = ({ product, initial, onAddHandler, setCart, cart }) => {
   const [counter, setCounter] = useState(0);
 
   return (
@@ -10,7 +10,9 @@ const ItemCount = ({ stock, initial, onAddHandler }) => {
             counter: counter,
             setCounter: setCounter,
             initial: initial,
-            stock: stock,
+            product: product,
+            cart: cart,
+            setCart: setCart,
           })
         }
       >
@@ -24,7 +26,9 @@ const ItemCount = ({ stock, initial, onAddHandler }) => {
             counter: counter,
             setCounter: setCounter,
             initial: initial,
-            stock: stock,
+            product: product,
+            cart: cart,
+            setCart: setCart,
           })
         }
       >

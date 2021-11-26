@@ -11,7 +11,7 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
-
+  const [cart, setCart] = useState([]);
   return (
     <div className="App">
       <NavBar />
@@ -24,6 +24,8 @@ function App() {
               ItemListContainer={ItemListContainer}
               allProducts={allProducts}
               setAllProducts={setAllProducts}
+              cart={cart}
+              setCart={setCart}
             />
           }
         />
@@ -35,6 +37,8 @@ function App() {
               ItemListContainer={ItemListContainer}
               allProducts={allProducts}
               setAllProducts={setAllProducts}
+              cart={cart}
+              setCart={setCart}
             />
           }
         />
