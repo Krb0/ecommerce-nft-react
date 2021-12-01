@@ -1,7 +1,5 @@
-import StyledItemList from "./StyledItemList.js";
-import Item from "../Item";
 import ReactPagination from "react-paginate";
-
+import ItemList from "../ItemList";
 const ItemListContainer = ({ products, page, setPage, cart, setCart }) => {
   const onPageChange = ({ selected }) => {
     setPage(selected);
@@ -25,20 +23,13 @@ const ItemListContainer = ({ products, page, setPage, cart, setCart }) => {
         disabledClassName={"paginate-disabled"}
         activeClassName={"paginate-active"}
       />
-      <StyledItemList>
-        {products
-          .slice(pagesVisited, pagesVisited + itemsPerPage)
-          .map((product) => {
-            return (
-              <Item
-                product={product}
-                key={product.key}
-                cart={cart}
-                setCart={setCart}
-              />
-            );
-          })}
-      </StyledItemList>
+      <ItemList
+        pagesVisited={pagesVisited}
+        itemsPerPage={itemsPerPage}
+        cart={cart}
+        setCart={setCart}
+        products={products}
+      />
       <ReactPagination
         previousLabel={"Previous"}
         nextLabel={"Next"}

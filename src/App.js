@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Home from "./views/Home";
 import Products from "./views/Products";
 import Footer from "./components/Footer/Footer";
-import ItemList from "./components/Products/containers/ItemList";
+import ItemList from "./components/Products/containers/ItemListContainer";
 import ItemDetailContainer from "./components/Products/containers/ItemDetailContainer";
 import NotMatch from "./components/NotMatch/NotMatch";
 import { useState } from "react";
