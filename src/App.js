@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Home from "./views/Home";
 import Products from "./views/Products";
 import Footer from "./components/Footer/Footer";
-import ItemListContainer from "./components/Products/containers/ItemListContainer";
+import ItemList from "./components/Products/containers/ItemList";
 import ItemDetailContainer from "./components/Products/containers/ItemDetailContainer";
 import NotMatch from "./components/NotMatch/NotMatch";
 import { useState } from "react";
@@ -21,7 +21,7 @@ function App() {
           path="/products"
           element={
             <Products
-              ItemListContainer={ItemListContainer}
+              ItemListContainer={ItemList}
               allProducts={allProducts}
               setAllProducts={setAllProducts}
               cart={cart}
@@ -34,7 +34,7 @@ function App() {
           path="/category/:idCategory"
           element={
             <Products
-              ItemListContainer={ItemListContainer}
+              ItemListContainer={ItemList}
               allProducts={allProducts}
               setAllProducts={setAllProducts}
               cart={cart}

@@ -1,5 +1,5 @@
 import React from "react";
-import profileImg from "../../../images/profile.png";
+import profileImg from "../../images/profile.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 const ItemDetail = ({ product }) => {
