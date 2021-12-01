@@ -3,7 +3,6 @@ import Item from "./Item";
 import StyledItemList from "./StyledItemList";
 
 const ItemList = ({ pagesVisited, itemsPerPage, cart, setCart, products }) => {
-  console.log("test");
   return (
     <StyledItemList>
       {products
