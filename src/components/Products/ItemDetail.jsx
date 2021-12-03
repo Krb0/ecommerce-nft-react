@@ -3,7 +3,6 @@ import profileImg from "../../images/profile.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import ItemCount from "./ItemCount";
-import onAddHandler from "./controllers/onAddHandler";
 const ItemDetail = ({ product }) => {
   return (
     <>
@@ -30,11 +29,7 @@ const ItemDetail = ({ product }) => {
           </a>
         </div>
         <div className="btn-container">
-          <ItemCount
-            initial={5}
-            product={product}
-            onAddHandler={onAddHandler}
-          />
+          <ItemCount initial={5} product={product} />
         </div>
       </div>
     </>

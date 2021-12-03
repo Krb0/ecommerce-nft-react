@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
 const StyledCardNFT = styled.div`
+  a {
+    text-decoration: none;
+    color: inherit;
+    max-width: 450px;
+    height: inherit;
+  }
   padding: 0.1rem;
   display: flex;
   flex-direction: column;
@@ -11,14 +17,14 @@ const StyledCardNFT = styled.div`
   margin: 0.1rem;
   align-items: center;
   max-width: 450px;
-  box-shadow:rgb(4 17 29 / 10%) 2px 2px 8px 2px;
+  box-shadow: rgb(4 17 29 / 10%) 2px 2px 8px 2px;
   img {
     width: 95%;
     max-width: 350px;
     height: 280px;
     object-fit: cover;
     object-position: center;
-    cursor:pointer;
+    cursor: pointer;
     user-select: none;
   }
   h1 {

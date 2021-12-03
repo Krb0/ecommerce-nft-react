@@ -26,14 +26,17 @@ const StyledCartContainer = styled.div`
     border: 1px red solid;
   }
   .info img {
+    height: 200px;
     aspect-ratio: 1;
+    margin: auto 3.1%;
     align-self: center;
   }
   .info span,
   .headers-container span {
     margin: auto;
-    text-align: center;
     font-size: 0.5rem;
+    text-align: center;
+    width: 20%;
   }
 `;
 

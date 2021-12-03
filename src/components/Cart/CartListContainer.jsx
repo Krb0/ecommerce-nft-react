@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import StyledCartContainer from "./StyledCartContainer";
 import CartList from "./CartList";
+import clearCart from "./controllers/clearCartHandler";
+import { CartContext } from "../GlobalComponents/CartContext";
+
 const CartListContainer = () => {
+  const [cart, setCart] = useContext(CartContext);
   return (
     <StyledCartContainer>
       <div id="table">
@@ -13,8 +17,15 @@ const CartListContainer = () => {
           <span>Total</span>
         </div>
 
-        <CartList />
+        <CartList cart={cart} setCart={setCart} />
       </div>
+      <button
+        onClick={() => {
+          clearCart(setCart);
+        }}
+      >
+        Clear List
+      </button>
     </StyledCartContainer>
   );
 };

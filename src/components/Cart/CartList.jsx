@@ -1,12 +1,9 @@
-import React, { useContext } from "react";
-import { CartContext } from "../GlobalComponents/CartContext";
 import CartItem from "./CartItem";
-const CartList = () => {
-  const [cart, setCart] = useContext(CartContext);
+const CartList = ({ cart, setCart }) => {
   return (
     <div className="info-container">
       {cart.map((prod) => (
-        <CartItem product={prod} key={prod.id} />
+        <CartItem product={prod} key={prod.item.id} />
       ))}
     </div>
   );

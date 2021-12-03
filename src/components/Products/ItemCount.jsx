@@ -1,5 +1,7 @@
 import { useState, useContext } from "react";
 import { CartContext } from "../GlobalComponents/CartContext";
+import onCounter from "./controllers/onCounter";
+import addItem from "../../utils/addItem";
 const ItemCount = ({ product, initial, onAddHandler }) => {
   const [counter, setCounter] = useState(product.oncart ? product.oncart : 0);
   const [cart, setCart] = useContext(CartContext);
@@ -7,13 +9,9 @@ const ItemCount = ({ product, initial, onAddHandler }) => {
     <div className="counter-div">
       <button
         onClick={() =>
-          onAddHandler("decrement", {
+          onCounter("decrement", {
             counter: counter,
             setCounter: setCounter,
-            initial: initial,
-            product: product,
-            cart: cart,
-            setCart: setCart,
           })
         }
       >
@@ -23,19 +21,18 @@ const ItemCount = ({ product, initial, onAddHandler }) => {
 
       <button
         onClick={() =>
-          onAddHandler("increment", {
+          onCounter("increment", {
             counter: counter,
             setCounter: setCounter,
-            initial: initial,
             product: product,
-            cart: cart,
-            setCart: setCart,
           })
         }
       >
         +
       </button>
-      <button>Add to Cart</button>
+      <button onClick={() => addItem(product, counter, cart, setCart)}>
+        Add to Cart
+      </button>
     </div>
   );
 };
