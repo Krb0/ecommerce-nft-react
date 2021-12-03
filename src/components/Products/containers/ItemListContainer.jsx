@@ -1,6 +1,6 @@
 import ReactPagination from "react-paginate";
 import ItemList from "../ItemList";
-const ItemListContainer = ({ products, page, setPage, cart, setCart }) => {
+const ItemListContainer = ({ products, page, setPage }) => {
   const onPageChange = ({ selected }) => {
     setPage(selected);
   };
@@ -26,8 +26,6 @@ const ItemListContainer = ({ products, page, setPage, cart, setCart }) => {
       <ItemList
         pagesVisited={pagesVisited}
         itemsPerPage={itemsPerPage}
-        cart={cart}
-        setCart={setCart}
         products={products}
       />
       <ReactPagination

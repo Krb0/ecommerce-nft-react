@@ -3,13 +3,7 @@ import StyledProductsPage from "./StyledProductsPage";
 import getAllProducts from "../utils/getAllProducts";
 import Loader from "../components/GlobalComponents/Loader.jsx";
 import { useParams } from "react-router-dom";
-const Products = ({
-  ItemListContainer,
-  allProducts,
-  setAllProducts,
-  cart,
-  setCart,
-}) => {
+const Products = ({ ItemListContainer, allProducts, setAllProducts }) => {
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
   const [page, setPage] = useState(0);
   const { idCategory } = useParams();
@@ -53,8 +47,6 @@ const Products = ({
             products={filteredProducts}
             page={page}
             setPage={setPage}
-            cart={cart}
-            setCart={setCart}
           />
         </>
       )}

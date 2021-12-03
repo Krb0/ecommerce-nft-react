@@ -1,7 +1,8 @@
-import { useState } from "react";
-const ItemCount = ({ product, initial, onAddHandler, setCart, cart }) => {
-  const [counter, setCounter] = useState(0);
-
+import { useState, useContext } from "react";
+import { CartContext } from "../GlobalComponents/CartContext";
+const ItemCount = ({ product, initial, onAddHandler }) => {
+  const [counter, setCounter] = useState(product.oncart ? product.oncart : 0);
+  const [cart, setCart] = useContext(CartContext);
   return (
     <div className="counter-div">
       <button

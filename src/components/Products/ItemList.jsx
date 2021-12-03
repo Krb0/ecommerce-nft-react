@@ -1,8 +1,8 @@
 import React from "react";
 import Item from "./Item";
-import StyledItemList from "./StyledItemList";
+import StyledItemList from "./containers/StyledItemList";
 
-const ItemList = ({ pagesVisited, itemsPerPage, cart, setCart, products }) => {
+const ItemList = ({ pagesVisited, itemsPerPage, products }) => {
   return (
     <StyledItemList>
       {products
@@ -12,8 +12,6 @@ const ItemList = ({ pagesVisited, itemsPerPage, cart, setCart, products }) => {
             <Item
               product={product}
               key={product.key}
-              cart={cart}
-              setCart={setCart}
             />
           );
         })}

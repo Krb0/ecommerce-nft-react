@@ -2,10 +2,8 @@ import React from "react";
 import StyledCardNFT from "./containers/StyledCardNFT";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
-import ItemCount from "./ItemCount";
-import onAddHandler from "./controllers/onAddHandler";
 import { Link } from "react-router-dom";
-const Product = ({ product, cart, setCart }) => {
+const Product = ({ product }) => {
   return (
     <StyledCardNFT>
       <Link to={`/products/${product.id}`}>
@@ -14,13 +12,6 @@ const Product = ({ product, cart, setCart }) => {
       <div className="detail-container">
         <div className="name-div">
           <h1 onClick={() => console.log(product.nftimage)}>{product.name} </h1>
-          <ItemCount
-            initial={0}
-            product={product}
-            onAddHandler={onAddHandler}
-            cart={cart}
-            setCart={setCart}
-          />
         </div>
         <div className="price-container">
           <h3>Price</h3>
