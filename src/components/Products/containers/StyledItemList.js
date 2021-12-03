@@ -9,8 +9,6 @@ const StyledItemList = styled.div`
   margin: 0.2rem 1rem;
   justify-content: center;
   min-height: 100px;
-
-
 `;
 
 export default StyledItemList;

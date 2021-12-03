@@ -78,6 +78,15 @@ const StyledItemDetail = styled.div`
       }
     }
   }
+  button {
+    background: #33bbdd;
+    cursor: pointer;
+    color: white;
+    border: none;
+  }
+  .end-purchase {
+    background: #f70909;
+  }
   @media (max-width: 999px) {
     .nft-info {
       width: 90%;

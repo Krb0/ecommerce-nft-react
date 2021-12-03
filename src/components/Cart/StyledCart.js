@@ -38,6 +38,11 @@ const StyledCartContainer = styled.div`
     text-align: center;
     width: 20%;
   }
+  .clear-btn {
+    width: 80px;
+    align-self: center;
+    margin-bottom: 1rem;
+  }
 `;
 
 export default StyledCartContainer;
