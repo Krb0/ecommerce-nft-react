@@ -9,15 +9,20 @@ const ItemDetailContainer = () => {
   const { idProduct } = useParams();
   const [product, setProduct] = useState();
   useEffect(() => {
-    getAllProducts.then((res) => {
-      const filteredProd = res.find((prod) => prod.id === parseInt(idProduct));
-      if (filteredProd) setProduct(filteredProd);
-      else window.location.href = "/notfound";
+    let isResolved = true;
+    getAllProducts().then((res) => {
+      if (isResolved) {
+        const filteredProd = res.find((prod) => prod.id === idProduct);
+        if (filteredProd) setProduct(filteredProd);
+        else window.location.href = "/notfound";
+      }
     });
+    return () => {
+      isResolved = false;
+    };
   }, [product, idProduct]);
   return (
     <StyledItemDetail>
-      {}
       {product ? <ItemDetail product={product} t /> : <Loader />}
     </StyledItemDetail>
   );

@@ -10,24 +10,22 @@ const Products = ({ ItemListContainer, allProducts, setAllProducts }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    getAllProducts
-      .then((res) => {
-        if (idCategory) {
-          const filteredCategory = res.filter(
-            (prod) => prod.category === idCategory
-          );
-          if (filteredCategory.length === 0) {
-            window.location.href = "/notfound";
-          } else {
-            setAllProducts(filteredCategory);
-            setFilteredProducts(filteredCategory);
-          }
+    getAllProducts().then((res) => {
+      if (idCategory) {
+        const filteredCategory = res.filter(
+          (prod) => prod.category === idCategory
+        );
+        if (filteredCategory.length === 0) {
+          window.location.href = "/notfound";
         } else {
-          setAllProducts(res);
-          setFilteredProducts(res);
+          setAllProducts(filteredCategory);
+          setFilteredProducts(filteredCategory);
         }
-      })
-      .catch((error) => console.log(error));
+      } else {
+        setAllProducts(res);
+        setFilteredProducts(res);
+      }
+    });
   }, [setAllProducts, idCategory]);
   return (
     <StyledProductsPage>

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import StyledCartContainer from "./StyledCart";
 import CartList from "./CartList";
 import clearCart from "./controllers/clearCartHandler";
-import { CartContext } from "../GlobalComponents/CartContext";
+import { CartContext } from "../../Context/CartContext";
 
 const CartListContainer = () => {
   const [cart, setCart] = useContext(CartContext);

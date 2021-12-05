@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { CartContext } from "../GlobalComponents/CartContext";
+import { CartContext } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
 import onCounter from "./controllers/onCounter";
 import addItem from "../../utils/addItem";

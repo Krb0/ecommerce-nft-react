@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer";
 import ItemListContainer from "./components/Products/containers/ItemListContainer";
 import ItemDetailContainer from "./components/Products/containers/ItemDetailContainer";
 import NotMatch from "./components/NotMatch/NotMatch";
-import { CartProvider } from "./components/GlobalComponents/CartContext";
+import { CartProvider } from "./Context/CartContext";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
