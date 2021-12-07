@@ -10,10 +10,6 @@ const CartListContainer = () => {
     <StyledCartContainer>
       <div id="table">
         <div className="headers-container">
-          <span>Image</span>
-          <span>Name</span>
-          <span>Price</span>
-          <span>Quantity</span>
           <span>Total</span>
         </div>
 

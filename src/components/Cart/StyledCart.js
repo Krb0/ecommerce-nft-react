@@ -38,10 +38,26 @@ const StyledCartContainer = styled.div`
     text-align: center;
     width: 20%;
   }
+  .headers-container span {
+    font-size: 0.5rem;
+    margin-left: 80%;
+  }
   .clear-btn {
     width: 80px;
     align-self: center;
     margin-bottom: 1rem;
+  }
+  svg {
+    color: purple;
+    margin-left: 0.01rem;
+  }
+  .span-input {
+    width: 20%;
+    input {
+      width: 35px;
+      height: 35px;
+      text-align: center;
+    }
   }
 `;
 

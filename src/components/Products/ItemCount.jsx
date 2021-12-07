@@ -4,9 +4,14 @@ import { Link } from "react-router-dom";
 import onCounter from "./controllers/onCounter";
 import addItem from "../../utils/addItem";
 const ItemCount = ({ product, initial, onAddHandler }) => {
-  const [counter, setCounter] = useState(product.oncart ? product.oncart : 0);
+  const counterInitial = () => {
+    const itemExists = cart.find((cartItem) => cartItem.item.id === product.id);
+    return itemExists ? itemExists.quantity : 0;
+  };
   const [cart, setCart] = useContext(CartContext);
+  const [counter, setCounter] = useState(counterInitial());
   const [buttonSwitch, setButtonSwitch] = useState(false);
+
   return (
     <div className="counter-div">
       {buttonSwitch ? (

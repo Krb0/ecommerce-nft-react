@@ -23,6 +23,7 @@ const ItemDetail = ({ product }) => {
             <FontAwesomeIcon icon={faEthereum} />
             <p>{product.price} ETH</p>
           </div>
+
           <a className="nft-creator-container" href="https://github.com/krb0">
             <img src={profileImg} alt="profile icon" />
             <h3>Krb0</h3>
