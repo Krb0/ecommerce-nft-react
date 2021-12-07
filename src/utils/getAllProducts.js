@@ -1,6 +1,6 @@
 import { docsGetter } from "../Firebase/firebase";
 
-const shuffled = async () => {
+const shuffler = async () => {
   const array = await docsGetter();
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -10,9 +10,9 @@ const shuffled = async () => {
   }
   return array;
 };
-
+const shuffled = shuffler();
 const getAllProducts = () => {
-  return shuffled();
+  return shuffled;
 };
 
 export default getAllProducts;
