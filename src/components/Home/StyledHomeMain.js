@@ -17,39 +17,17 @@ const StyledHomeMain = styled.div`
   }
   h2 {
     display: block;
-    margin: 0;
     margin-top: 1rem;
     font-family: Mohave;
     text-shadow: -0.2px 0 black, 0 0.2px black, 0.2px 0 black, 0 -0.2px black;
-
     font-style: normal;
     font-weight: 700;
-    font-size: 1.4;
     color: #ffffff;
-  }
-  .btn-explore {
-    font-family: Lato, sans-serif;
-    font-weight: 400;
-    width: 3rem;
-    height: 0.9rem;
-    background-color: #fff;
-    border: 1px solid #fff;
-    font-size: 0.4rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-    cursor: pointer;
-    :hover {
-      color: #242423;
-    }
   }
   @media (max-width: 900px) {
     background-position: center;
     h2 {
       font-size: 1rem;
-    }
-    .btn-explore {
-      font-size: 0.25rem;
-      width: 2rem;
     }
   }
 `;

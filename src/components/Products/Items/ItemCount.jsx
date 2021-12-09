@@ -1,8 +1,8 @@
 import { useState, useContext } from "react";
-import { CartContext } from "../../Context/CartContext";
+import { CartContext } from "../../../Context/CartContext";
 import { Link } from "react-router-dom";
-import onCounter from "./controllers/onCounter";
-import addItem from "../../utils/addItem";
+import onCounter from "../controllers/onCounter";
+import addItem from "../../../utils/addItem";
 const ItemCount = ({ product, initial, onAddHandler }) => {
   const counterInitial = () => {
     const itemExists = cart.find((cartItem) => cartItem.item.id === product.id);

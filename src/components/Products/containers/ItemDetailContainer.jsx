@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import StyledItemDetail from "./StyledItemDetail";
 import getAllProducts from "../../../utils/getAllProducts";
+import { getOneDoc } from "../../../Firebase/firebase";
 import Loader from "../../GlobalComponents/Loader";
-import ItemDetail from "../ItemDetail";
+import ItemDetail from "../Items/ItemDetail";
 
 const ItemDetailContainer = () => {
   const { idProduct } = useParams();
@@ -12,9 +13,11 @@ const ItemDetailContainer = () => {
     let isResolved = true;
     getAllProducts().then((res) => {
       if (isResolved) {
-        const filteredProd = res.find((prod) => prod.id === idProduct);
-        if (filteredProd) setProduct(filteredProd);
-        else window.location.href = "/notfound";
+        const filteredProd = getOneDoc(idProduct);
+        filteredProd.then((res) => {
+          if (filteredProd) setProduct(res);
+          else window.location.href = "/notfound";
+        });
       }
     });
     return () => {

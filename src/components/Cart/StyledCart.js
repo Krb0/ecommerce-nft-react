@@ -3,60 +3,102 @@ import styled from "styled-components";
 const StyledCartContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  .headers-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.5rem;
-  }
-  .info-container {
-    display: flex;
-    flex-direction: column;
-    max-height: 800px;
-    overflow-y: scroll;
-    align-items: space-between;
-    min-height: 600px;
-  }
-  .info {
-    display: flex;
-    justify-self: center;
-    justify-content: space-between;
-    height: 300px;
-    min-height: 200px;
-    border: 1px red solid;
-  }
-  .info img {
-    height: 200px;
-    aspect-ratio: 1;
-    margin: auto 3.1%;
-    align-self: center;
-  }
-  .info span,
-  .headers-container span {
-    margin: auto;
-    font-size: 0.5rem;
+  button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
     text-align: center;
-    width: 20%;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
   }
-  .headers-container span {
-    font-size: 0.5rem;
-    margin-left: 80%;
+  .btn-clr {
+    background-color: #4caf50;
+    margin-top: 1rem;
   }
-  .clear-btn {
-    width: 80px;
-    align-self: center;
+  .btn-complete {
+    background-color: #f44336;
     margin-bottom: 1rem;
   }
-  svg {
-    color: purple;
-    margin-left: 0.01rem;
+  .span-total {
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+    svg {
+      color: purple;
+    }
   }
-  .span-input {
-    width: 20%;
-    input {
-      width: 35px;
-      height: 35px;
-      text-align: center;
+  .span-total,
+  .btn-complete,
+  .btn-clr {
+    align-self: flex-end;
+    margin-right: 1rem;
+  }
+
+  .info-container {
+    max-height: 900px;
+    overflow-y: scroll;
+
+    .info {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      margin: 1rem auto;
+      font-size: 0.5rem;
+      padding: 0.5rem;
+      .info-quantity {
+        width: 100px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        svg {
+          font-size: 24px;
+          margin-left: 0.1rem;
+          color: red;
+          cursor: pointer;
+        }
+        input {
+          width: 40px;
+          height: 45px;
+          text-align: center;
+          font-size: 0.3rem;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+      }
+      .info-image {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 200px;
+        span {
+          width: 90%;
+          text-align: center;
+          margin-left: 0.2rem;
+        }
+        img {
+          height: 200px;
+          width: 200px;
+        }
+      }
+      .info-price {
+        display: flex;
+        align-items: center;
+        svg {
+          color: purple;
+        }
+      }
+      @media (max-width: 800px) {
+        .info-image {
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 500px) {
+        flex-direction: column;
+        align-items: center;
+        div {
+          margin: 0.5rem auto;
+        }
+      }
     }
   }
 `;

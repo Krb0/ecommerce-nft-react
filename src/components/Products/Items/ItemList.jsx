@@ -1,6 +1,6 @@
 import React from "react";
 import Item from "./Item";
-import StyledItemList from "./containers/StyledItemList";
+import StyledItemList from "../containers/StyledItemList";
 
 const ItemList = ({ pagesVisited, itemsPerPage, products }) => {
   return (

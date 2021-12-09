@@ -1,35 +1,50 @@
 import React from "react";
+import inputHandler from "./controllers/inputHandler";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
+import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
 const CartItem = ({ product, setCart, cart }) => {
   const { item, quantity } = product;
   return (
     <div className="info">
-      <img src={item.nftimage} alt="nft" />
-      <span>{item.name}</span>
-      <span>
-        {item.price.toFixed(4)}
-        <FontAwesomeIcon icon={faEthereum} />
-      </span>
-      <span className="span-input">
+      <div className="info-image">
+        <Link to={`/products/${product.item.id}`}>
+          <img src={item.nftimage} alt="nft" />
+        </Link>
+        <span>{item.name}</span>
+      </div>
+
+      <div className="info-quantity">
         <input
           placeholder={quantity}
           onChange={(e) => {
-            const newCart = cart.filter((prod) => product.item !== prod.item);
-            const newQuantity =
-              product.item.stock >= e.target.value
-                ? e.target.value
-                : product.item.stock;
-            e.target.value = newQuantity;
-            setCart([...newCart, { item: item, quantity: newQuantity }]);
+            inputHandler({
+              cart: cart,
+              product: product,
+              event: e,
+              item: item,
+              setCart: setCart,
+            });
           }}
         />
-      </span>
-      <span>
-        {(quantity * item.price).toFixed(4)}
-        <FontAwesomeIcon icon={faEthereum} />
-      </span>
+        <FontAwesomeIcon
+          icon={faTimesCircle}
+          onClick={() => {
+            const filteredCart = cart.filter(
+              (prod) => prod.item.id !== item.id
+            );
+            setCart(filteredCart);
+          }}
+        />
+      </div>
+      <div className="info-price">
+        <span>
+          {(quantity * item.price).toFixed(4)}
+          <FontAwesomeIcon icon={faEthereum} />
+        </span>
+      </div>
     </div>
   );
 };

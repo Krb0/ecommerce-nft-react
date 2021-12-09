@@ -1,13 +1,11 @@
 import StyledHomeMain from "./StyledHomeMain";
-import { Link } from "react-router-dom";
+import ExploreButton from "../GlobalComponents/ExploreButton";
 const HomeSection = () => {
   return (
     <StyledHomeMain>
       <div>
         <h2>CreaturesNFT</h2>
-        <Link to="/products">
-          <button className="btn-explore">Explore</button>
-        </Link>
+        <ExploreButton />
       </div>
     </StyledHomeMain>
   );

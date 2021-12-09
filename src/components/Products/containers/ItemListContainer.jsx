@@ -1,5 +1,5 @@
 import ReactPagination from "react-paginate";
-import ItemList from "../ItemList";
+import ItemList from "../Items/ItemList";
 const ItemListContainer = ({ products, page, setPage }) => {
   const onPageChange = ({ selected }) => {
     setPage(selected);
