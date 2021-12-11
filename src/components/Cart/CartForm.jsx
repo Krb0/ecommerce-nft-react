@@ -27,7 +27,7 @@ const CartForm = ({ cart }) => {
           setBought([
             {
               buyer: { email: values.email, password: values.password },
-              items: cart.map((cartItem) => {
+              items: temporalCart.map((cartItem) => {
                 return { id: cartItem.item.id, name: cartItem.item.name };
               }),
             },
