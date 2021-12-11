@@ -3,6 +3,7 @@ import StyledCartContainer from "../StyledCart";
 import CartList from "../CartList";
 import clearCart from "../controllers/clearCartHandler";
 import CartEmpty from "../CartEmpty";
+import CartForm from "../CartForm";
 import { CartContext } from "../../../Context/CartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
@@ -31,6 +32,7 @@ const CartListContainer = () => {
             Total: {totalPrice.toFixed(4)} <FontAwesomeIcon icon={faEthereum} />
           </span>
           <button className="btn-complete">Complete</button>
+          <CartForm cart={cart} />
         </StyledCartContainer>
       ) : (
         <CartEmpty />

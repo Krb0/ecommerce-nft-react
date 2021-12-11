@@ -5,6 +5,7 @@ import {
   collection,
   getDocs,
   getDoc,
+  addDoc,
   doc,
 } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -26,7 +27,14 @@ initializeApp(firebaseConfig);
 const db = getFirestore();
 
 // collection ref
-export const colRef = collection(db, "products");
+const colRef = collection(db, "products");
+
+// order ref
+const colOrder = collection(db, "orders");
+
+export const addOrder = async (order) => {
+  await addDoc(collection(db, "orders"), { ...order });
+};
 
 // get collection data
 export const docsGetter = async () => {
