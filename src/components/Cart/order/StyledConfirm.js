@@ -32,6 +32,21 @@ const StyledConfirm = styled.div`
     align-self: center;
     margin-top: 0.5rem;
   }
+  .btn-back {
+    background: gray;
+    display: flex;
+    gap: 0.06rem;
+    svg {
+      color: white;
+    }
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.2rem;
+  }
   @media (max-width: 600px) {
     font-size: 0.35rem;
   }

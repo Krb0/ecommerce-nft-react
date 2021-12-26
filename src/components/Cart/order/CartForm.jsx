@@ -64,7 +64,7 @@ const CartForm = ({
             type="submit"
             disabled={isSubmitting}
           >
-            Submit
+            Next
           </button>
         </StyledCartForm>
       )}
