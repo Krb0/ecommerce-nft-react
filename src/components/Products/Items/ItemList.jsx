@@ -8,12 +8,7 @@ const ItemList = ({ pagesVisited, itemsPerPage, products }) => {
       {products
         .slice(pagesVisited, pagesVisited + itemsPerPage)
         .map((product) => {
-          return (
-            <Item
-              product={product}
-              key={product.key}
-            />
-          );
+          return <Item {...product} key={product.key} />;
         })}
     </StyledItemList>
   );

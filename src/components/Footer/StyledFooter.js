@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledFooter = styled.footer`
   background-color: #242424;
-  height: 300px;
+  height: 250px;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -13,9 +13,9 @@ const StyledFooter = styled.footer`
   color: white;
   h2 {
     font-family: "Red Hat Mono", monospace;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     margin-top: 1rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: -0.3rem;
     text-align: center;
   }
   ul {

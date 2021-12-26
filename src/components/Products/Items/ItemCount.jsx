@@ -1,6 +1,8 @@
 import { useState, useContext } from "react";
 import { CartContext } from "../../../Context/CartContext";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { expandAnimation } from "./animation";
 import onCounter from "../controllers/onCounter";
 import addItem from "../../../utils/addItem";
 const ItemCount = ({ product, initial, onAddHandler }) => {
@@ -16,7 +18,14 @@ const ItemCount = ({ product, initial, onAddHandler }) => {
     <div className="counter-div">
       {buttonSwitch ? (
         <Link to="/cart">
-          <button className="end-purchase">Complete Purchase</button>
+          <motion.button
+            className="end-purchase"
+            variants={expandAnimation}
+            initial="hidden"
+            animate="show"
+          >
+            Complete Purchase
+          </motion.button>
         </Link>
       ) : (
         <>

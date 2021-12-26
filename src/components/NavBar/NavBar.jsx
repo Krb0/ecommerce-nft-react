@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import CartWidget from "./CartWidget";
-import DuckImg from "../../images/duck-img.png";
+import DuckImg from "../../assets/images/duck-img.png";
 import StyledNav from "./StyledNav";
 const fontColor = "#242424";
 const fontFocusColor = "#3bd";

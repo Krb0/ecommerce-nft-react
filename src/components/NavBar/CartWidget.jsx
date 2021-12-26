@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import trolleySVG from "../../images/trolley.svg";
+import trolleySVG from "../../assets/images/trolley.svg";
 import { CartContext } from "../../Context/CartContext";
 
 function CartWidget() {

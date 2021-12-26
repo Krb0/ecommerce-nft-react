@@ -1,16 +1,27 @@
 import React from "react";
-import profileImg from "../../../images/profile.png";
+import profileImg from "../../../assets/images/profile.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import ItemCount from "./ItemCount";
+import { motion } from "framer-motion";
+import { titleAnimation, fade } from "./animation";
 const ItemDetail = ({ product }) => {
   return (
     <>
       <div className="image-container">
-        <img className="nft-image" src={product.nftimage} alt={"nft icon"} />
+        <motion.img
+          className="nft-image"
+          src={product.nftimage}
+          alt={"nft icon"}
+          variants={fade}
+          initial="hidden"
+          animate="show"
+        />
       </div>
       <div className="nft-info">
-        <h1>{product.name}</h1>
+        <motion.h1 initial="hidden" animate="show" variants={titleAnimation}>
+          {product.name}
+        </motion.h1>
         <p className="nft-stock">{product.stock} in stock</p>
         <p className="nft-text">
           Lorem ipsum Enim id anim deserunt est irure irure voluptate dolor

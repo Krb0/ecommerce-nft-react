@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
-
+import notificationHandler from "./controllers/notificationHandler";
 const CartItem = ({ product, setCart, cart }) => {
   const { item, quantity } = product;
   return (
@@ -36,6 +36,8 @@ const CartItem = ({ product, setCart, cart }) => {
               (prod) => prod.item.id !== item.id
             );
             setCart(filteredCart);
+            if (filteredCart.length === 0) notificationHandler(true);
+            else notificationHandler(false);
           }}
         />
       </div>

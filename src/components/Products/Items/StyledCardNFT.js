@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-const StyledCardNFT = styled.div`
+import { motion } from "framer-motion";
+const StyledCardNFT = styled(motion.div)`
   padding: 0.1rem;
   display: flex;
   flex-direction: column;

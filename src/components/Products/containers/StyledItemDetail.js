@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 const StyledItemDetail = styled.div`
   min-height: 90vh;
   display: flex;
@@ -7,6 +6,7 @@ const StyledItemDetail = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
+  overflow-x: hidden;
   .nft-image {
     border-radius: 5px;
     width: 600px;
@@ -67,15 +67,25 @@ const StyledItemDetail = styled.div`
     .btn-container {
       display: flex;
       justify-content: center;
+      height: 1rem;
       .counter-div {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 0.1rem;
         width: 160px;
         button {
           height: 0.5rem;
         }
       }
+    }
+  }
+  @keyframes colorAnimation {
+    0% {
+      background: #33bbdd;
+    }
+    100% {
+      background: #242424;
     }
   }
   button {
@@ -85,7 +95,12 @@ const StyledItemDetail = styled.div`
     border: none;
   }
   .end-purchase {
-    background: #f70909;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.22rem;
+    font-weight: 800;
+    :hover {
+      animation: colorAnimation 1s 1 ease-out forwards;
+    }
   }
   @media (max-width: 999px) {
     .nft-info {
@@ -102,6 +117,9 @@ const StyledItemDetail = styled.div`
       margin-top: 1rem;
       width: 300px;
       height: 300px;
+    }
+    .counter-div button {
+      font-size: 0.2rem;
     }
     .nft-info {
       * {

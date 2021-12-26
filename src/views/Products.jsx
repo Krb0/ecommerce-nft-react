@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import StyledProductsPage from "./StyledProductsPage";
 import getAllProducts from "../utils/getAllProducts";
-import Loader from "../components/GlobalComponents/Loader.jsx";
 import Sorter from "../components/Products/Sorter";
 import { getCategoryDocs } from "../Firebase/firebase";
 import { useParams } from "react-router-dom";
+import Wave from "../components/GlobalComponents/Wave";
 const Products = ({ ItemListContainer, allProducts, setAllProducts }) => {
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
   const [page, setPage] = useState(0);
@@ -32,7 +32,7 @@ const Products = ({ ItemListContainer, allProducts, setAllProducts }) => {
   return (
     <StyledProductsPage>
       {allProducts.length === 0 ? (
-        <Loader />
+        <Wave />
       ) : (
         <>
           <Sorter

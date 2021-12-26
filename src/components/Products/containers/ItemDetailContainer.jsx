@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import StyledItemDetail from "./StyledItemDetail";
 import { getOneDoc } from "../../../Firebase/firebase";
-import Loader from "../../GlobalComponents/Loader";
+import Wave from "../../GlobalComponents/Wave";
 import ItemDetail from "../Items/ItemDetail";
 
 const ItemDetailContainer = () => {
@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
   }, [product, idProduct]);
   return (
     <StyledItemDetail>
-      {product ? <ItemDetail product={product} t /> : <Loader />}
+      {product ? <ItemDetail product={product} t /> : <Wave />}
     </StyledItemDetail>
   );
 };

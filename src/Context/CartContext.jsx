@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext([]);
+
 export const CartProvider = (props) => {
   const [cart, setCart] = useState(
     localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : []

@@ -30,7 +30,8 @@ const db = getFirestore();
 const colRef = collection(db, "products");
 
 export const addOrder = async (order) => {
-  await addDoc(collection(db, "orders"), { ...order });
+  const newOrder = await addDoc(collection(db, "orders"), { ...order });
+  return newOrder.id;
 };
 
 // get collection data
