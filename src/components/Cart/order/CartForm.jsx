@@ -51,13 +51,7 @@ const CartForm = ({
       {({ isSubmitting }) => (
         <StyledCartForm>
           <label to="name">Enter your Name</label>
-          <Field
-            id="name"
-            type="name"
-            name="name"
-            placeholder="Your Name"
-            value="tester"
-          />
+          <Field id="name" type="name" name="name" placeholder="Your Name" />
           <ErrorMessage name="name" component="span" />
           <label to="email">Enter your email</label>
           <Field
@@ -65,7 +59,6 @@ const CartForm = ({
             type="email"
             name="email"
             placeholder="Your Email"
-            value="tester@gmail.com"
           />
           <ErrorMessage name="email" component="span" />
           <button
