@@ -6,13 +6,20 @@ import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 import StyledConfirm from "./StyledConfirm";
-const ConfirmOrder = ({ order, totalPrice, orderDispatch, setOrder }) => {
+const ConfirmOrder = ({
+  order,
+  totalPrice,
+  orderDispatch,
+  setOrder,
+  isDeluxe,
+}) => {
   return (
     <StyledConfirm>
       <span>{order.buyer.name}</span>
       <span>{order.buyer.email}</span>
+      <span>{isDeluxe ? "Deluxe" : "Normal"} Shipping</span>
       <span className="total">
-        {totalPrice.toFixed(5)}
+        {totalPrice.toFixed(4)}
         <FontAwesomeIcon icon={faEthereum} />
       </span>
       <div>
@@ -26,10 +33,14 @@ const ConfirmOrder = ({ order, totalPrice, orderDispatch, setOrder }) => {
         </button>
         <button
           onClick={async () => {
+            const newOrderID = await addOrder(order);
+            setOrder({
+              ...order,
+              id: newOrderID,
+              total: totalPrice.toFixed(4),
+              delivery: isDeluxe,
+            });
             orderDispatch({ type: "confirm", value: true });
-
-            const newOrder = await addOrder(order);
-            setOrder({ ...order, id: newOrder });
           }}
         >
           Confirm

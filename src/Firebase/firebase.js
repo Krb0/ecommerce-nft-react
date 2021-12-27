@@ -47,6 +47,12 @@ export const getOneDoc = async (id) => {
   const docSnap = await getDoc(docRef);
   return docSnap.data();
 };
+
+export const getOrder = async (id) => {
+  const docRef = doc(db, "orders", id);
+  const docSnap = await getDoc(docRef);
+  return docSnap.data();
+};
 export const getCategoryDocs = async (category) => {
   const snapshot = await getDocs(colRef);
   const docs = snapshot.docs.filter(

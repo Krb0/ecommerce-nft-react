@@ -9,6 +9,7 @@ const OrderFormHandler = ({
   order,
   setOrder,
   totalPrice,
+  isDeluxe,
 }) => {
   return (
     <>
@@ -17,11 +18,13 @@ const OrderFormHandler = ({
           cart={cart}
           order={order}
           setOrder={setOrder}
+          totalPrice={totalPrice}
           orderState={orderState}
           orderDispatch={orderDispatch}
+          isDeluxe={isDeluxe}
         />
       ) : orderState.register && orderState.confirm ? (
-        <EndOrder order={order} totalPrice={totalPrice} />
+        <EndOrder order={order} totalPrice={totalPrice} isDeluxe={isDeluxe} />
       ) : (
         <ConfirmOrder
           order={order}
@@ -29,6 +32,7 @@ const OrderFormHandler = ({
           totalPrice={totalPrice}
           orderState={orderState}
           orderDispatch={orderDispatch}
+          isDeluxe={isDeluxe}
         />
       )}
     </>

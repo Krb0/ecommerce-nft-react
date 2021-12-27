@@ -75,7 +75,8 @@ const StyledItemDetail = styled.div`
         gap: 0.1rem;
         width: 160px;
         button {
-          height: 0.5rem;
+          padding: 0.15rem;
+          font-size: 15px;
         }
       }
     }

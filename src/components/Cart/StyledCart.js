@@ -3,18 +3,28 @@ import styled from "styled-components";
 const StyledCartContainer = styled.div`
   display: flex;
   flex-direction: column;
+  .cart-btn-container {
+    align-self: center;
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    button {
+      background-color: rgb(51, 187, 221);
+      margin-top: 1rem;
+    }
+    .btn-clr {
+      background-color: #4caf50;
+    }
+  }
   button {
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
+    border-radius: 4px;
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
-  }
-  .btn-clr {
-    background-color: #4caf50;
-    margin-top: 1rem;
   }
   .btn-complete {
     background-color: #f44336;
@@ -28,8 +38,7 @@ const StyledCartContainer = styled.div`
     }
   }
   .span-total,
-  .btn-complete,
-  .btn-clr {
+  .btn-complete {
     align-self: flex-end;
     margin-right: 1rem;
   }

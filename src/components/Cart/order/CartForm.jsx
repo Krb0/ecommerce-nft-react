@@ -8,6 +8,7 @@ const CartForm = ({
   order,
   setOrder,
   totalPrice,
+  isDeluxe,
 }) => {
   return (
     <Formik
@@ -41,6 +42,7 @@ const CartForm = ({
               name: cartItem.item.name,
             };
           }),
+          total: totalPrice.toFixed(4),
         });
         setSubmitting(false);
         orderDispatch({ type: "register", value: true });
@@ -49,7 +51,13 @@ const CartForm = ({
       {({ isSubmitting }) => (
         <StyledCartForm>
           <label to="name">Enter your Name</label>
-          <Field id="name" type="name" name="name" placeholder="Your Name" />
+          <Field
+            id="name"
+            type="name"
+            name="name"
+            placeholder="Your Name"
+            value="tester"
+          />
           <ErrorMessage name="name" component="span" />
           <label to="email">Enter your email</label>
           <Field
@@ -57,6 +65,7 @@ const CartForm = ({
             type="email"
             name="email"
             placeholder="Your Email"
+            value="tester@gmail.com"
           />
           <ErrorMessage name="email" component="span" />
           <button
