@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { scrollReveal } from "./animation";
 import { useScroll } from "./useScroll";
 
-const Product = ({ id, nftimage, name, price }) => {
+const Product = ({ id, nftimage, name, price, stock }) => {
   const [element, controls] = useScroll();
   return (
     <StyledCardNFT
@@ -15,6 +15,7 @@ const Product = ({ id, nftimage, name, price }) => {
       animate={controls}
       initial="hidden"
     >
+      {stock === 0 ? <span className="card-stock">out of stock</span> : ""}
       <Link to={`/products/${id}`} className="detail-link">
         <img src={nftimage} alt="nft"></img>
 

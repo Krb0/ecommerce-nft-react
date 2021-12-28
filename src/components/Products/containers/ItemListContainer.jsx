@@ -16,7 +16,6 @@ const ItemListContainer = ({ products, page, setPage }) => {
   useEffect(() => {
     setPage(0);
   }, [pageCount, setPage]);
-
   return (
     <>
       <ReactPagination

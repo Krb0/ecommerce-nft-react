@@ -12,6 +12,8 @@ const StyledCardNFT = styled(motion.div)`
   align-items: center;
   max-width: 450px;
   box-shadow: rgb(4 17 29 / 10%) 2px 2px 8px 2px;
+  position: relative;
+  overflow: hidden;
   a {
     text-decoration: none;
     color: inherit;
@@ -38,6 +40,17 @@ const StyledCardNFT = styled(motion.div)`
     color: #525252;
     width: 80%;
     padding: 0 0.2rem;
+  }
+  .card-stock {
+    position: absolute;
+    font-size: 0.3rem;
+    width: 5rem;
+    left: -90px;
+    padding-right: 0.5rem;
+    text-align: center;
+    transform: rotate(-25deg);
+    background-color: rgba(235, 232, 232, 0.95);
+    font-family: "Roboto", sans-serif;
   }
   .detail-container {
     width: 95%;

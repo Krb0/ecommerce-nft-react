@@ -40,6 +40,7 @@ const CartForm = ({
             return {
               id: cartItem.item.id,
               name: cartItem.item.name,
+              quantity: cartItem.quantity,
             };
           }),
           total: totalPrice.toFixed(4),
