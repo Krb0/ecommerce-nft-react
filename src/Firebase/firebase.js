@@ -13,12 +13,12 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAmh8LnqugtKq0eYnWZzCaaeC-33ZruhW4",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "creaturesnft-caceres.firebaseapp.com",
   projectId: "creaturesnft-caceres",
   storageBucket: "creaturesnft-caceres.appspot.com",
-  messagingSenderId: "354764018048",
-  appId: "1:354764018048:web:91c979900301f8960d7165",
+  messagingSenderId: process.env.SENDER_ID,
+  appId: process.env.APP_ID,
 };
 
 // Initialize Firebase
