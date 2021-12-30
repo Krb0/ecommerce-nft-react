@@ -8,9 +8,6 @@
 # testing
 /coverage
 
-# database
-.env
-
 # production
 /build
 
