@@ -1,7 +1,6 @@
 import React from "react";
 import { addOrder } from "../../../Firebase/firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -33,11 +32,10 @@ const ConfirmOrder = ({
         </button>
         <button
           onClick={async () => {
-            const newOrderID = await addOrder(order);
+            const newOrderID = await addOrder({ ...order, delivery: isDeluxe });
             setOrder({
               ...order,
               id: newOrderID,
-              total: totalPrice.toFixed(4),
               delivery: isDeluxe,
             });
             orderDispatch({ type: "confirm", value: true });

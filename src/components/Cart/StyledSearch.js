@@ -52,10 +52,30 @@ const StyledSearch = styled.div`
       font-size: 0.3rem;
     }
   }
-
-  @media (max-width: 600px) {
+  ul {
+    list-style-type: none;
+    overflow-y: scroll;
+    max-height: 2rem;
+    align-self: start;
+    margin-top: 0;
+    margin-left: 5%;
+    width: 6rem;
+    li {
+      font-size: 0.4rem;
+    }
+  }
+  @media (max-width: 500px) {
+    input {
+      min-width: 200px;
+      width: 90%;
+    }
     h2 {
       font-size: 0.5rem;
+    }
+    ul {
+      max-height: 1rem;
+      margin-bottom: 0;
+      width: 6rem;
     }
     p {
       font-size: 0.4rem;

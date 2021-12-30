@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const StyledModal = styled.div`
   position: fixed;
-  top: 20vh;
   left: 5%;
+  top: 20%;
+  transform: translate(-50%, -50%);
   width: 90%;
   background-color: white;
   padding: 1rem;
@@ -14,7 +15,6 @@ export const StyledModal = styled.div`
   @media (min-width: 768px) {
     width: 90%;
   }
-
   @keyframes slide-down {
     from {
       opacity: 0;

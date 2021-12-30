@@ -11,6 +11,7 @@ const CartForm = ({
   isDeluxe,
 }) => {
   return (
+    // Using Formik library
     <Formik
       initialValues={{ name: "", email: "" }}
       validate={(values) => {
@@ -30,7 +31,7 @@ const CartForm = ({
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
-        const temporalCart = cart;
+        const temporalCart = cart.filter((cartItem) => cartItem.quantity > 1);
         setOrder({
           buyer: {
             email: values.email,

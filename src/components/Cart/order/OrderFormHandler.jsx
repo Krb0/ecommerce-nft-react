@@ -12,6 +12,7 @@ const OrderFormHandler = ({
   isDeluxe,
 }) => {
   return (
+    // Managing order's view form by order state
     <>
       {!orderState.register && !orderState.confirm ? (
         <CartForm

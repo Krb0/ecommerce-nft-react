@@ -16,6 +16,7 @@ const OrderSearch = () => {
             onSubmit={async (e) => {
               e.preventDefault();
               const order = await getOrder(inputRef.current.value);
+              // Checking if entered order ID exists in firestore
               if (order) {
                 setSearchExists(true);
                 setSearchData(order);
@@ -43,6 +44,16 @@ const OrderSearch = () => {
             <span>Delivery:</span>{" "}
             {searchData.delivery ? "Deluxe (~20 minutes)" : "Normal (~5 hours)"}
           </p>
+          <p>
+            <span>Items: </span>{" "}
+          </p>
+          <ul>
+            {searchData.items.map((prod) => (
+              <li>
+                {prod.name} x {prod.quantity}{" "}
+              </li>
+            ))}
+          </ul>
           <p>
             <span>Total:</span> {searchData.total}
           </p>

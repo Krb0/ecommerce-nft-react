@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 const EndOrder = ({ order, totalPrice, isDeluxe }) => {
   useEffect(() => {
+    // Playing beel sound when order is confirmed
     const audio = new Audio(bellSound);
     audio.play();
   }, []);

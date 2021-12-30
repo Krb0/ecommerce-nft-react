@@ -8,6 +8,7 @@ import {
   faBell,
 } from "@fortawesome/free-regular-svg-icons";
 const OrderProgression = ({ orderState }) => {
+  // Coloring order's progress icon by order's state
   return (
     <StyledOrderProgression>
       <FontAwesomeIcon

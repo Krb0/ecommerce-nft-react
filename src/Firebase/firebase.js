@@ -27,34 +27,39 @@ initializeApp(firebaseConfig);
 const db = getFirestore();
 
 // collection ref
-const colRef = collection(db, "products");
+const productsColRef = collection(db, "products");
 
+// adding order to db
 export const addOrder = async (order) => {
   const newOrder = await addDoc(collection(db, "orders"), { ...order });
   return newOrder.id;
 };
 
-// get collection data
+// getting all products
 export const docsGetter = async () => {
-  const snapshot = await getDocs(colRef);
+  const snapshot = await getDocs(productsColRef);
   const docs = snapshot.docs;
   const docsArray = [];
   docs.forEach((doc) => docsArray.push({ ...doc.data(), id: doc.id }));
   return docsArray;
 };
+
+// getting product by id
 export const getOneDoc = async (id) => {
   const docRef = doc(db, "products", id);
   const docSnap = await getDoc(docRef);
   return docSnap.data();
 };
 
+// getting order by id
 export const getOrder = async (id) => {
   const docRef = doc(db, "orders", id);
   const docSnap = await getDoc(docRef);
   return docSnap.data();
 };
+// getting products by category
 export const getCategoryDocs = async (category) => {
-  const snapshot = await getDocs(colRef);
+  const snapshot = await getDocs(productsColRef);
   const docs = snapshot.docs.filter(
     (prod) => prod.data().category === category
   );
