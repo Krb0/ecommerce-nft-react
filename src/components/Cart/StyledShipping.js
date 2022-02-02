@@ -7,7 +7,7 @@ const StyledShipping = styled.div`
   padding: 1rem;
   margin-bottom: 0.5rem;
   .active {
-    background: rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.05);
   }
   .info-shipping-container {
     display: flex;

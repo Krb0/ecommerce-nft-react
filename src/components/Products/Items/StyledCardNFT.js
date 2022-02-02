@@ -88,8 +88,21 @@ const StyledCardNFT = styled(motion.div)`
 
     .name-div {
       height: 100%;
+      text-align: center;
+      max-width: 100px;
       display: flex;
       flex-direction: column;
+      width: 100%;
+      h1 {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .name-div {
+      h1 {
+        font-size: 0.21rem;
+      }
     }
   }
 `;
